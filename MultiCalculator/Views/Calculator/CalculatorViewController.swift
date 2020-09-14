@@ -27,7 +27,7 @@ class CalculatorViewController: UIViewController, Injectable {
             newValue.font = dependency.isPortrait
                 ? UIFontMetrics.default.scaledFont(for: UIFont.systemFont(ofSize: 68, weight: .light))
                 : UIFontMetrics.default.scaledFont(for: UIFont.systemFont(ofSize: 48, weight: .light))
-            newValue.textColor = .systemBackground
+            newValue.textColor = .label
             newValue.textAlignment = .right
             newValue.adjustsFontSizeToFitWidth = true
             newValue.adjustsFontForContentSizeCategory = true
@@ -49,7 +49,7 @@ class CalculatorViewController: UIViewController, Injectable {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .label
+        view.backgroundColor = .systemBackground
         
         stackViews.forEach({
             $0.spacing = dependency.isPortrait ? 20 : 4

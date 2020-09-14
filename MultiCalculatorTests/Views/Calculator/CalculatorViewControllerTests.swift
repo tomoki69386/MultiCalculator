@@ -82,4 +82,9 @@ class CalculatorViewControllerTests: XCTestCase {
         XCTAssertEqual(createViewController(isPortrait: true).stackViews[5].spacing, 20.0)
         XCTAssertEqual(createViewController(isPortrait: false).stackViews[5].spacing, 4.0)
     }
+    
+    func testColor() {
+        let viewController = createViewController(isPortrait: true)
+        XCTAssertEqual(viewController.view.backgroundColor, UIColor.systemBackground)
+    }
 }

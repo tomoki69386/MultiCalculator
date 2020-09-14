@@ -28,7 +28,7 @@ struct CalculatorBrainService {
     }
     
     enum Operation {
-        case constant(Double)
+//        case constant(Double)
         case unary((Double) -> Double)
         case binary((Double, Double) -> Double)
         case equals
@@ -52,8 +52,8 @@ struct CalculatorBrainService {
             return
         }
         switch operation {
-        case .constant(let value):
-            accumulator = value
+//        case .constant(let value):
+//            accumulator = value
         case .unary(let f):
             guard let accumulator = accumulator else { return }
             self.accumulator = f(accumulator)

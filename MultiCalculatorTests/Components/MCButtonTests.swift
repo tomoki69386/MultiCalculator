@@ -32,15 +32,8 @@ class MCButtonTests: XCTestCase {
     }
     
     func testCornerRadius() {
+        mcButton.layoutIfNeeded()
         XCTAssertEqual(mcButton.layer.cornerRadius, 25)
-    }
-    
-    func testBorderColor() {
-        XCTAssertEqual(mcButton.layer.borderColor, UIColor.label.cgColor)
-    }
-    
-    func testBorderWidth() {
-        XCTAssertEqual(mcButton.layer.borderWidth, 1)
     }
     
     func testBackgroundColor() {

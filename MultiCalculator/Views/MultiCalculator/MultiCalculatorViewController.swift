@@ -29,7 +29,7 @@ class MultiCalculatorViewController: UIViewController, Injectable {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .label
+        view.backgroundColor = .systemBackground
         containerView.distribution = .fillEqually
         
         orientationDidChanged()

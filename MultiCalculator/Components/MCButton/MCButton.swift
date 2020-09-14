@@ -27,9 +27,7 @@ class MCButton: UIButton {
     
     private func commonInit() {
         self.clipsToBounds = true
-        self.layer.borderColor = UIColor.label.cgColor
-        self.layer.borderWidth = 1
-        self.setTitleColor(.systemBackground, for: .normal)
+        self.setTitleColor(.white, for: .normal)
         self.titleLabel?.font = UIFontMetrics.default.scaledFont(for: UIFont.systemFont(ofSize: 28, weight: .bold))
         self.backgroundColor = .darkGray
     }

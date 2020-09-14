@@ -11,6 +11,8 @@ jobs:
     name: Xcode 11.5
     env:
       DEVELOPER_DIR: "/Applications/Xcode_11.5.app"
+      MINT_PATH: mint/lib
+      MINT_LINK_PATH: mint/bin
     steps:
       - uses: actions/checkout@v2
       
@@ -35,6 +37,7 @@ jobs:
         run: |
           set -o pipefail
           xcodebuild build-for-testing test-without-building -project MultiCalculator.xcodeproj -scheme MultiCalculatorTests -configuration Debug -sdk iphonesimulator -destination "name=iPhone 8" ENABLE_TESTABILITY=YES | xcpretty -c
+
       - name: codecov
         run: bash <(curl -s https://codecov.io/bash)
         if: success()

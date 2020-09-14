@@ -3,3 +3,5 @@
 vendor/
 mint
 *.xcodeproj/
+
+fastlane/report.xml

@@ -13,6 +13,8 @@
 # Uncomment the line if you want fastlane to automatically update itself
 # update_fastlane
 
+require 'Date'
+
 default_platform(:ios)
 
 platform :ios do
@@ -45,6 +47,18 @@ platform :ios do
       type: "development",
       app_identifier: [ios_identifier, macOS_identifier],
       readonly: true
+    )
+  end
+
+  lane :upgrade_version do 
+    today = Date.today
+
+    shortVersionString = "#{today.year}.#{today.month}.#{today.day}"
+
+    set_info_plist_value(
+      path: './MultiCalculator/Resources/Info/Release.plist',
+      key: 'CFBundleShortVersionString',
+      value: shortVersionString
     )
   end
 end

@@ -26,6 +26,11 @@ fastlane ios test_and_build
 fastlane ios all_certificates
 ```
 
+### ios upgrade_version
+```
+fastlane ios upgrade_version
+```
+
 
 ----
 

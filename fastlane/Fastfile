@@ -61,4 +61,19 @@ platform :ios do
       value: shortVersionString
     )
   end
+
+  lane :increment do 
+    build_number = get_info_plist_value(
+      path: './MultiCalculator/Resources/Info/Release.plist',
+      key: 'CFBundleVersion'
+    ).to_i
+
+    build_number += 1
+
+    set_info_plist_value(
+      path: './MultiCalculator/Resources/Info/Release.plist',
+      key: 'CFBundleVersion',
+      value: build_number
+    )
+  end
 end

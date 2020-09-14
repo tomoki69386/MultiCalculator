@@ -17,7 +17,7 @@
 	<key>CFBundleShortVersionString</key>
 	<string>2020.9.14</string>
 	<key>CFBundleVersion</key>
-	<string>10</string>
+	<integer>11</integer>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UIApplicationSceneManifest</key>

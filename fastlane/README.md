@@ -31,6 +31,11 @@ fastlane ios all_certificates
 fastlane ios upgrade_version
 ```
 
+### ios increment
+```
+fastlane ios increment
+```
+
 
 ----
 

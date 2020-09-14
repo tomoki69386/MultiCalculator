@@ -73,7 +73,7 @@ platform :ios do
     set_info_plist_value(
       path: './MultiCalculator/Resources/Info/Release.plist',
       key: 'CFBundleVersion',
-      value: build_number
+      value: "#{build_number}"
     )
   end
 end

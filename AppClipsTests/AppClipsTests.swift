@@ -2,7 +2,7 @@
 //  AppClipsTests.swift
 //  AppClipsTests
 //
-//  Created by 築山朋紀 on 2020/09/19.
+//  Created by 築山朋紀 on 2020/09/20.
 //
 
 import XCTest

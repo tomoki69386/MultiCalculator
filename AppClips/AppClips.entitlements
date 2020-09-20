@@ -4,11 +4,11 @@
 <dict>
 	<key>com.apple.developer.associated-domains</key>
 	<array>
-		<string>https://tomoki69386.github.io/multi-calculator</string>
+		<string>appclips:tomoki69386.github.io/multi-calculator</string>
 	</array>
-	<key>com.apple.security.app-sandbox</key>
-	<true/>
-	<key>com.apple.security.network.client</key>
-	<true/>
+	<key>com.apple.developer.parent-application-identifiers</key>
+	<array>
+		<string>$(AppIdentifierPrefix)com.tomoki-sun.app.ios.multi-calculator</string>
+	</array>
 </dict>
 </plist>

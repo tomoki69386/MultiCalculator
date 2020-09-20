@@ -38,24 +38,24 @@ platform :ios do
   end
 
   lane :all_certificates do
-    ios_identifier = "com.tomoki-sun.app.ios.multi-calculator"
-    macOS_identifier = "com.tomoki-sun.app.macOS.multi-calculator"
+    ios_identifier = 'com.tomoki-sun.app.ios.multi-calculator'
+    appClips_identifier = 'com.tomoki-sun.app.ios.multi-calculator.AppClips'
 
     match(
-      type: "adhoc",
-      app_identifier: [ios_identifier, macOS_identifier],
+      type: 'adhoc',
+      app_identifier: [ios_identifier, appClips_identifier],
       readonly: true
     )
 
     match(
-      type: "appstore",
-      app_identifier: [ios_identifier, macOS_identifier],
+      type: 'appstore',
+      app_identifier: [ios_identifier, appClips_identifier],
       readonly: true
     )
 
     match(
-      type: "development",
-      app_identifier: [ios_identifier, macOS_identifier],
+      type: 'development',
+      app_identifier: [ios_identifier, appClips_identifier],
       readonly: true
     )
   end

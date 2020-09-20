@@ -4,7 +4,7 @@ type("appstore") # The default type, can be: appstore, adhoc, enterprise or deve
 
 app_identifier([
   "com.tomoki-sun.app.ios.multi-calculator",
-  "com.tomoki-sun.app.macOS.multi-calculator"
+  "com.tomoki-sun.app.ios.multi-calculator.AppClips"
 ])
 
 username("developertomokisun@gmail.com")

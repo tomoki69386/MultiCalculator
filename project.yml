@@ -13,6 +13,8 @@ targets:
     sources:
       - path: MultiCalculator
     scheme: {}
+    dependencies:
+      - target: Shared
     settings:
       base:
         TARGETED_DEVICE_FAMILY: "1,2"
@@ -43,3 +45,21 @@ targets:
       gatherCoverageData: true
       testTargets:
         - MultiCalculatorTests
+
+  Shared:
+    type: framework
+    platform: iOS
+    developmentTarget: 13.1.3
+    sources: Shared
+    scheme:
+      gatherCoverageData: true
+      testTargets: 
+        - SharedTests
+    settings:
+      base:        
+        PRODUCT_BUNDLE_IDENTIFIER: com.tomoki-sun.app.ios.multi-calculator.shared
+  
+  SharedTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources: SharedTests

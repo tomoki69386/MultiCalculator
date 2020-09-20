@@ -27,6 +27,16 @@ platform :ios do
     )
   end
 
+  lane :test_shared do 
+    scan(
+      clean: true,
+      skip_slack: true,
+      project: './MultiCalculator.xcodeproj',
+      scheme: 'Shared',
+      device: 'iPhone 11 Pro'
+    )
+  end
+
   lane :all_certificates do
     ios_identifier = "com.tomoki-sun.app.ios.multi-calculator"
     macOS_identifier = "com.tomoki-sun.app.macOS.multi-calculator"

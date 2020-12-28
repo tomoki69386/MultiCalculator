@@ -1,7 +1,7 @@
 name: MultiCalculator
 options:
   developmentLanguage: ja
-  xcodeVersion: 11.5
+  xcodeVersion: 12.3.0
 config:
   Debug: debug
   Release: release

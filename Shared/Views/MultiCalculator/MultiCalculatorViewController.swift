@@ -50,9 +50,8 @@ public class MultiCalculatorViewController: UIViewController, Injectable {
         }
         var dependencies: [CalculatorViewController.Dependency] = [.init(isPortrait: orientation.isPortrait)]
         
-        Logger.debug("userInterfaceIdiom: \(UIDevice.current.userInterfaceIdiom.deviceName)")
-        Logger.debug("isPortrait:         \(orientation.isPortrait)")
-        Logger.debug("isLandscape:        \(orientation.isLandscape)")
+        Logger.debug("isPortrait:  \(orientation.isPortrait)")
+        Logger.debug("isLandscape: \(orientation.isLandscape)")
         
         switch (UIDevice.current.userInterfaceIdiom, orientation.isPortrait) {
         case (.phone, false):
@@ -69,26 +68,5 @@ public class MultiCalculatorViewController: UIViewController, Injectable {
         
         calculatorContainer.dependencies([])
         calculatorContainer.dependencies(dependencies)
-    }
-}
-
-extension UIUserInterfaceIdiom {
-    var deviceName: String {
-        switch UIDevice.current.userInterfaceIdiom {
-        case .phone:
-            return "iPhone"
-        case .pad:
-            return "iPad"
-        case .mac:
-            return "Mac"
-        case .carPlay:
-            return "CarPlay"
-        case .tv:
-            return "TV"
-        case .unspecified:
-            return "unspecified"
-        default:
-            fatalError()
-        }
     }
 }

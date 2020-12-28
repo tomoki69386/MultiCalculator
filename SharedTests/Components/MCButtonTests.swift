@@ -22,10 +22,6 @@ class MCButtonTests: XCTestCase {
         XCTAssertEqual(mcButton.titleLabel?.font.pointSize, 28.0)
     }
     
-    func testTitleColor() {
-        XCTAssertEqual(mcButton.titleLabel?.textColor, UIColor.label)
-    }
-    
     func testClipsToBounds() {
         XCTAssertTrue(mcButton.clipsToBounds)
     }
